@@ -1,0 +1,44 @@
+{
+  "_description": "Externalized quality rule thresholds for annotation scoring framework. Edit here to adjust rules without code changes.",
+  "_last_updated": "2024-11-01",
+
+  "scoring": {
+    "auto_reject_threshold": 40,
+    "review_threshold": 70,
+    "high_quality_threshold": 85
+  },
+
+  "geometry_rules": {
+    "min_bbox_area_px": 10,
+    "max_bbox_area_pct": 0.5,
+    "min_bbox_width_px": 2,
+    "min_bbox_height_px": 2
+  },
+
+  "deductions": {
+    "missing_confidence_score": 10,
+    "small_bbox": 10,
+    "large_bbox": 15,
+    "unknown_label": 20,
+    "missing_required_field": 20,
+    "invalid_geometry": 15
+  },
+
+  "statistical_alerts": {
+    "z_score_alert_threshold": 3.0,
+    "accuracy_drop_alert_pct": 10.0,
+    "min_samples_for_zscore": 30
+  },
+
+  "required_fields": [
+    "annotation_id",
+    "frame_id",
+    "project_id",
+    "annotator_id",
+    "object_class",
+    "bbox_x_min",
+    "bbox_x_max",
+    "bbox_y_min",
+    "bbox_y_max"
+  ]
+}
